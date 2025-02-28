@@ -1,0 +1,26 @@
+# Golang build files
+/bin/
+/pkg/
+*.exe
+*.out
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Ignore sensitive files
+*.env
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.properties
+config/*.json
+config/*.yaml
+config/*.yml
+secrets/
+credentials/
