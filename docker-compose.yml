@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  email-service:
+    build: .
+    ports:
+      - "3025:8080"
+    environment:
+      - DB_HOST
+      - DB_PORT
+      - DB_USER
+      - DB_PASSWORD
+      - DB_NAME
+      - COLLECTION_NAME
+    env_file:
+      - .env
