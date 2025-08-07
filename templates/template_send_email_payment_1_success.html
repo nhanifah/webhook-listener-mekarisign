@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Subject }} - LPK Go Global</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .email-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .email-header {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        .email-body {
+            margin-bottom: 20px;
+        }
+
+        .email-footer {
+            font-size: 0.9em;
+            color: #555;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="
+email-container">
+        <div class="
+email-header">
+            <h2>Go Global Indonesia</h2>
+        </div>
+        <div class="
+email-body">
+            <p>Halo <strong>{{ .RecipientName }} san</strong>,</p>
+            <p>Terima kasih telah melakukan pembayaran pertama! 🎉</p>
+            <p>Kini, Anda telah memasuki tahap pembayaran ke-2, yang berlaku hingga {{ .DueDate }}. Untuk melanjutkan proses ini, silakan lakukan pembayaran melalui tautan berikut:</p>
+            <p><a href="{{ .Link }}" target="_blank">{{ .Link }}</a></p>
+            <p>Jika Anda memiliki pertanyaan tentang program atau hal lainnya, jangan ragu untuk menghubungi Admin
+                melalui WA di <strong>+62 851-2111-2337</strong>.</p>
+        </div>
+        <div class="
+email-footer">
+            <p><strong>📍 Go Global Indonesia (LPK Darinol Inovasi Indonesia)</strong><br>
+                📍 Jl. Prof. Dr. Surya Sumantri 92, Sukajadi, Sukagalih, Kota Bandung<br>
+                📞 TEL : +62 851-2111-2337 (WA)<br>
+                📧 Mail : info@go-global.id</p>
+        </div>
+    </div>
+</body>
+
+</html>

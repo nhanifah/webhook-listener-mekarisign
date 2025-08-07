@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Berhasil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .success-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin: 0 auto 15px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .info-box {
+            text-align: left;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .info-box .payout-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .info-box .copy-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-group a {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .button-group .blue {
+            background: #3b82f6;
+            color: white;
+        }
+        .button-group .gray {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- <div class="success-icon">✔</div> -->
+        <div class="title">Siswa Telah Membayar</div>
+        
+        <div class="info-box">
+            <!-- <p><strong>payoutLink</strong></p>
+            <div class="payout-link">
+                <span>https://payout.xendit.co/wel...</span>
+                <button class="copy-btn">Salin</button>
+            </div> -->
+
+            <p><strong>Nama</strong><br>{{ .RecipientName }}</p>
+            <p><strong>Deskripsi</strong><br>{{ .Subject }}</p>
+            <p><strong>Jumlah Pembayaran</strong><br>{{ .Amount }}</p>
+            <p><strong>Alamat Email Peserta</strong><br>{{ .To }}</p>
+        </div>
+
+        <div class="button-group">
+            <a href="{{ .InvoiceID }}" class="blue">Lihat Invoice</a>
+        </div>
+    </div>
+
+</body>
+</html>

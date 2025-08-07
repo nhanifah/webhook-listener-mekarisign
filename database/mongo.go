@@ -1,3 +1,4 @@
+// database/mongo.go
 package database
 
 import (
@@ -12,8 +13,8 @@ import (
 )
 
 type Database struct {
-	Client     *mongo.Client
-	Collection *mongo.Collection
+	Client *mongo.Client
+	DB     *mongo.Database
 }
 
 func ConnectMongoDB(cfg *config.Config) (*Database, error) {
@@ -32,8 +33,5 @@ func ConnectMongoDB(cfg *config.Config) (*Database, error) {
 
 	log.Println("Connected to MongoDB")
 
-	// Ambil koleksi yang dibutuhkan
-	collection := client.Database(cfg.DatabaseName).Collection(cfg.Collection)
-
-	return &Database{Client: client, Collection: collection}, nil
+	return &Database{Client: client, DB: client.Database(cfg.DatabaseName)}, nil
 }

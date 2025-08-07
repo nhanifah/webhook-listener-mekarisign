@@ -1,0 +1,41 @@
+{
+    "data": {
+        "attributes": {
+            "category": "global",
+            "created_at": "2025-03-05T02:08:19.812Z",
+            "doc_url": "/documents/a28fb035-3ec5-4c68-9188-3f9eb415b5e0/download",
+            "filename": "Surat Perjanjian Kontrak Direktur Go Global dan TITANNIA DIAH PITALOKA.pdf",
+            "invalided": {},
+            "is_autosign": false,
+            "signers": [
+                {
+                    "email": "titanniapita@gmail.com",
+                    "is_autosign": false,
+                    "name": "TITANNIA DIAH PITALOKA",
+                    "order": 0,
+                    "phone": "+6288267093948",
+                    "signed_at": "2025-03-05T02:39:50.559Z",
+                    "signing_url": null,
+                    "status": "completed"
+                },
+                {
+                    "email": "angga@go-global.id",
+                    "is_autosign": false,
+                    "name": "Angga Kurniawan",
+                    "order": 0,
+                    "phone": "",
+                    "signed_at": "2025-03-05T03:27:41.611Z",
+                    "signing_url": null,
+                    "status": "completed"
+                }
+            ],
+            "signing_status": "completed",
+            "stamping_status": "success",
+            "template_id": null,
+            "type_of_meterai": "Dokumen lain-lain",
+            "updated_at": "2025-03-05T03:27:46.756Z"
+        },
+        "id": "a28fb035-3ec5-4c68-9188-3f9eb415b5e0",
+        "type": "document"
+    }
+}

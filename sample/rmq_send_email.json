@@ -1,0 +1,7 @@
+{
+    "type": "email",
+    "subject": "Ujian Penempatan LPK Go Global",
+    "to": "aliffirdi07@gmail.com",
+    "format": "html",
+    "msg": "kode_html_dari_template"
+}

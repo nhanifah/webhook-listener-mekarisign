@@ -1,5 +1,5 @@
 # Gunakan image resmi Go
-FROM golang:1.20
+FROM golang:1.23
 
 # Set working directory di dalam container
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build aplikasi Go
-RUN go build -o app .
+RUN go build -o app ./cmd
 
 # Jalankan aplikasi
 CMD ["./app"]

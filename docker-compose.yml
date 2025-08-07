@@ -1,15 +1,20 @@
 version: "3.3"
 services:
-  email-service:
+  webhook-service:
     build: .
     ports:
-      - "3025:8080"
+      - "3025:3000"
     environment:
-      - DB_HOST
-      - DB_PORT
-      - DB_USER
-      - DB_PASSWORD
+      - DATABASE_URL
       - DB_NAME
       - COLLECTION_NAME
+      - SERVER_PORT
+      - XENDIT_SECRET_KEY
+      - XENDIT_PUBLIC_KEY
+      - XENDIT_CALLBACK_URL
+      - XENDIT_CALLBACK_TOKEN
+      - INVOICE_DURATION
+      - DIRECTOR_NAME
+      - DIRECTOR_EMAIL
     env_file:
       - .env
